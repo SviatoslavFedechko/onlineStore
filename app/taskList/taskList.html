@@ -1,0 +1,28 @@
+<h2>Todo</h2>
+<div ng-controller="TodoCtrl as todoCtrl">
+    <input type="text" placeholder="filter tasks" ng-model="taskName">
+    <br>
+
+    <div ng-repeat="todo in todoCtrl.todos | filter:false as undones">
+    </div>
+    <span>
+                    {{undones.length}} remaining
+                </span>
+
+    <ul class="unstyled">
+        <li ng-repeat="todo in todoCtrl.todos | filter:taskName">
+            <input type="checkbox" ng-model="todo.done">
+            <span class="done-">{{todo.text}}</span>
+            <button ng-click="todoCtrl.deleteTask(todo)">delete</button>
+        </li>
+    </ul>
+    <form ng-submit="addTodo()">
+        <input type="text" size="30" placeholder="add new todo here"
+               ng-model="todoCtrl.taskName">
+        <input class="btn-primary" type="submit" value="add"
+               ng-click="todoCtrl.addTask()">
+    </form>
+    <div ng-repeat="todo in (todoCtrl.dones = (todoCtrl.todos | filter:true))">
+    </div>
+    <a href="" ng-click="todoCtrl.archive()">archive</a>
+</div>
