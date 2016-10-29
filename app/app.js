@@ -1,6 +1,19 @@
 'use strict';
 
 // Declare app level module which depends on views, and components
-angular.module('myApp', [
-    'myApp.taskList'
-]);
+angular.module('onlineStoreApp', [
+    'ui.router'
+]).
+config(function ($stateProvider, $urlRouterProvider) {
+
+    $urlRouterProvider().otherwise('/home');
+
+    $stateProvider
+        .state('home',{
+            views: {
+                '': {}
+
+
+            }
+        })
+});
