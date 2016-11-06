@@ -5,14 +5,19 @@
     <meta charset="UTF-8">
     <title>Online Store</title>
 
-    <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css" />
 
     <!-- load angular and angular ui router -->
-    <script src="../bower_components/angular/angular.js"></script>
-    <script src="../bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
 
     <!-- load app modules -->
     <script src="uiRouterApp.js"></script>
+
+    <script type="text/javascript" src="home/home.js"></script>
+    <script type="text/javascript" src="electronics/electronics.js"></script>
+    <script type="text/javascript" src="include/header.js"></script>
+    <script type="text/javascript" src="search/search.js"></script>
 
 </head>
 
@@ -31,10 +36,6 @@
 
     <ng-include src="'include/footer.html'"></ng-include>
 
-    <script type="text/javascript" src="home/home.js"></script>
-    <script type="text/javascript" src="electronics/electronics.js"></script>
-    <script type="text/javascript" src="include/header.js"></script>
-    <script type="text/javascript" src="search/search.js"></script>
 </body>
 
 </html>

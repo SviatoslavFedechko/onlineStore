@@ -2,8 +2,8 @@
   "name": "onlineStoreApp",
   "private": true,
   "version": "0.0.0",
-  "description": "",
-  "repository": "",
+  "description": "onlineStoreApp",
+  "repository": "https://github.com/SviatoslavFedechko/onlineStore",
   "license": "MIT",
   "devDependencies": {
     "bower": "^1.7.7",
