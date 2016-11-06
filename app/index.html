@@ -1,10 +1,11 @@
 <!doctype html>
-<html ng-app="uiRouterDemoApp">
+<html ng-app="onlineStoreApp">
+
 <head>
     <meta charset="UTF-8">
-    <title>UI Router | Demo project</title>
+    <title>Online Store</title>
 
-    <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.min.css" />
 
     <!-- load angular and angular ui router -->
     <script src="../bower_components/angular/angular.js"></script>
@@ -14,33 +15,26 @@
     <script src="uiRouterApp.js"></script>
 
 </head>
+
 <body>
 
-<!-- Site top menu navigation -->
-<!--<nav class="navbar navbar-default">-->
-<!--    <div class="container">-->
+    <ng-include ng-controller="headerController" src="'include/header.html'"></ng-include>
 
-<!--        <ul class="nav navbar-nav">-->
-<!--            <li><a ui-sref="welcome">Simple state</a></li>-->
-<!--            <li><a ui-sref="params">State Parameters</a></li>-->
-<!--            <li><a ui-sref="customData">State Custom Data</a></li>-->
-<!--            <li><a ui-sref="nested">Nested Views</a></li>-->
-<!--            <li><a ui-sref="named">Named Views</a></li>-->
-<!--            <li><a ui-sref="calls">Callbacks</a></li>-->
-<!--        </ul>-->
-<!--    </div>-->
-<!--</nav>-->
+    <div class="row top-15">
 
-<!-- Templates will be rendered here -->
-<ui-view></ui-view>
-
-<div class="container-fluid" style="margin-top:65px;">
-        <footer id="footer" class="container">
-            <p align="center" class="text-muted credit">Online Store 2016</p>
-        </footer>
+        <!-- Templates will be rendered here -->
+        <div class="coll-sm-12">
+            <ui-view></ui-view>
+        </div>
+        
     </div>
 
+    <ng-include src="'include/footer.html'"></ng-include>
 
-<script src="home/home.js"></script>
+    <script type="text/javascript" src="home/home.js"></script>
+    <script type="text/javascript" src="electronics/electronics.js"></script>
+    <script type="text/javascript" src="include/header.js"></script>
+    <script type="text/javascript" src="search/search.js"></script>
 </body>
+
 </html>

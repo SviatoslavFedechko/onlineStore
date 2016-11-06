@@ -1,10 +1,15 @@
-<div class="container">
-
-    <div ui-view="header"></div>
-
+<div class="container ">
     <div class="row">
-        <div ui-view="sideBar" class="col-lg-2"></div>
-        <div ui-view="main" class="col-lg-8"></div>
+        <ul class="nav nav-tabs">
+            <li ui-sref-active="active"><a ui-sref="home.main">Top Sales</a></li>
+            <li ui-sref-active="active"><a ui-sref="home.electronics">Electronics</a></li>
+            <li ui-sref-active="active"><a ui-sref="home.fashion">Fashion</a></li>
+            <li ui-sref-active="active"><a ui-sref="home.home&garden">Home&Garden</a></li>
+        </ul>
     </div>
 
+    <div class="row">
+        <ui-view></ui-view>
+    </div>
+    
 </div>

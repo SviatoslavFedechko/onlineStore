@@ -1,14 +1,14 @@
-    <!-- Site top menu navigation -->
 <nav class="navbar navbar-default">
-    <div class="container">
 
-        <ul class="nav navbar-nav">
-            <li><a ui-sref="home">Home state</a></li>
-            <li><a ui-sref="params">State Parameters</a></li>
-            <li><a ui-sref="customData">State Custom Data</a></li>
-            <li><a ui-sref="nested">Nested Views</a></li>
-            <li><a ui-sref="named">Named Views</a></li>
-            <li><a ui-sref="calls">Callbacks</a></li>
-        </ul>
+    <div class="container">
+        <div class="row top-15">
+            <div class="col-sm-2">
+                Search field
+            </div>
+            <div class="col-sm-8">
+                <input type="text" name="search" class="form-control" ng-model="value" />
+            </div>
+            <button class="btn btn-primary" ng-click="searchValue(value)">Search</button>
+        </div>
     </div>
 </nav>
