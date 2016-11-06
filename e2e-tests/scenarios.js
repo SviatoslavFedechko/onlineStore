@@ -7,7 +7,7 @@ describe('onlineStoreApp', function() {
 
   it('should redirect `index.html` to `index.html#/main', function() {
     browser.get('index.html');
-    expect(browser.getLocationAbsUrl()).toBe('/main');
+    expect(browser.getLocationAbsUrl()).toMatch("/main");
   });
 
   // describe('View: Phone list', function() {
